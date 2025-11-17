@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDoS Protection System - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ DDoS Protection System</h1>
+            <div class="status" id="status">
+                <span class="status-indicator"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Packets</h3>
+                <div class="stat-value" id="total-packets">0</div>
+                <div class="stat-label">Processed</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Bytes</h3>
+                <div class="stat-value" id="total-bytes">0</div>
+                <div class="stat-label">Transferred</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Dropped Packets</h3>
+                <div class="stat-value" id="dropped-packets">0</div>
+                <div class="stat-label">Blocked</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Active Connections</h3>
+                <div class="stat-value" id="connections">0</div>
+                <div class="stat-label">Current</div>
+            </div>
+        </div>
+
+        <div class="charts-section">
+            <div class="chart-card">
+                <h3>Attack Detection</h3>
+                <canvas id="attack-chart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Traffic Overview</h3>
+                <canvas id="traffic-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="alerts-section">
+            <h3>Recent Attacks</h3>
+            <div id="alerts-list" class="alerts-list">
+                <p class="no-alerts">No attacks detected</p>
+            </div>
+        </div>
+
+        <div class="logs-section">
+            <h3>System Log</h3>
+            <div id="log-output" class="log-output">
+                <p>Waiting for logs...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
