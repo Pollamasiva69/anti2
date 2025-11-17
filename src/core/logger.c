@@ -12,6 +12,7 @@
 #include <pthread.h>
 #include <sys/stat.h>
 #include <errno.h>
+#include <arpa/inet.h>
 #include "../../include/common.h"
 #include "../../include/logger.h"
 
